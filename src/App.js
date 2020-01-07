@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import PropTypes from "prop-types";
+import Card from "./Card";
+import Decrement from './Decrement';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class BusinessCardForm extends Component {
+
+  render() {
+    return (
+      <div>
+        <div>{this.props.name}</div>
+        <div>{this.props.phonenumber}</div>
+        <div>{this.props.email}</div>
+      </div>
+    )
+  }
+};
+
+BusinessCardForm.propTypes = {
+  name: PropTypes.string,
+  phonenumber: PropTypes.string,
+  email: PropTypes.number.isRequired
+}
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Card name="Caitlin Selca" phonenumber="1-914-629-1281" email="caitlinselca@gmail.com"></Card>
+        <Card name="Elizabeth Selca" phonenumber="1-914-629-1283" email="elizabethselca@aol.com"></Card>
+        <Card name="Delia Selca" phonenumber="1-914-656-3230" email="deliaselca@yahoo.com"></Card>
+        <Decrement decnumber={5}></Decrement>
+      </div>
+    )
+  }
 }
 
 export default App;
