@@ -27,9 +27,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Card name="Caitlin Selca" phonenumber="1-914-629-1281" email="caitlinselca@gmail.com"></Card>
-        <Card name="Elizabeth Selca" phonenumber="1-914-629-1283" email="elizabethselca@aol.com"></Card>
-        <Card name="Delia Selca" phonenumber="1-914-656-3230" email="deliaselca@yahoo.com"></Card>
+        <Card name="Caitlin Selca" phonenumber="1-222-222-2222" email="caitlinselca@gmail.com"></Card>
+        <Card name="Elizabeth Selca" phonenumber="1-333-333-3333" email="elizabethselca@aol.com"></Card>
+        <Card name="Delia Selca" phonenumber="1-444-444-4444" email="deliaselca@yahoo.com"></Card>
         <Decrement decnumber={5}></Decrement>
       </div>
     )
